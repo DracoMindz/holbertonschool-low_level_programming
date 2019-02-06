@@ -1,2 +1,2 @@
 #!/bin/bash/
-echo *.c | *.c=$CFILE | cpp $CFILE.sh
+gcc -E $CFILE -o c
