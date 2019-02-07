@@ -1,0 +1,12 @@
+#include <stdio.h>
+
+/**
+ * main - Entry point
+ *
+ * Return: Assembly code saved to output file
+ */
+int main(void)
+{
+gcc $CFILE -o CFILE.s 
+    return (0);
+}
