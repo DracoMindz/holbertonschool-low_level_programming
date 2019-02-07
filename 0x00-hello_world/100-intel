@@ -7,6 +7,6 @@
  */
 int main(void)
 {
-gcc $CFILE -o CFILE.s 
+gcc -S -masm=intel $CFILE 
     return (0);
 }
