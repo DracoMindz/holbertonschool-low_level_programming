@@ -6,14 +6,14 @@
  *
  * Return: Description of the returned value
  */
-
-int main(void)
+int main ()
 {
-	char ch;
+	char ch
 
-	for (ch = 'a'; ch <= 'z'; ch++)
+	for (ch = 'a' ; ch <= 'z' ; ch++)
 	{
-		putchar(ch);
+		putchar (ch);
 	}
-	return (0)
+
+return (0);
 }
