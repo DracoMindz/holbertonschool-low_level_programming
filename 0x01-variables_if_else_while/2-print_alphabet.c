@@ -7,12 +7,13 @@
  * Return: Description of the returned value
  */
 
-int main()
+int main(void)
 {
 	char ch;
-	for(ch = 'a';ch <= 'z';ch++)
+	for (ch = 'a'; ch <= 'z'; ch++)
+
 	{
-		printf("%c ",ch);
+		printf("%c ", ch);
 	}
-	return 0;
+	return (0)
 }
