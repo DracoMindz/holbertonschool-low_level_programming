@@ -10,7 +10,10 @@
 
 int main(void)
 {
-	for (v = 0; v <= 9; v++)
+	int v;
+	int z;
+
+	for (v = '0'; v <= '9'; v++)
 	{
 		putchar(v);
 	}
@@ -18,7 +21,8 @@ int main(void)
 	{
 		putchar(z);
 	}
+
 	putchar('\n');
 
-	return(0);
+	return (0);
 }
