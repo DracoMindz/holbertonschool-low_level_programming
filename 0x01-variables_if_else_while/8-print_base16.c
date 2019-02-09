@@ -1,11 +1,11 @@
 #include <stdio.h>
 
 /**
- * main - print lowercase alphbet
+ * main - print base 16
  *
- * Description: Will print lowercase only
+ * Description: Will print characters of base 16
  *
- * Return: Description of the returned value
+ * Return: 0
  */
 
 int main(void)
