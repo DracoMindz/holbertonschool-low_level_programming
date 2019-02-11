@@ -8,13 +8,14 @@
  * Return: Description of the returned value
  */
 
-int nain(void)
+int main(void)
 {
-	int x
-	int z
+	int x;
+	int z;
+
 		for (x = '0'; x <= '9'; x++)
 		{
-			for (z = '0'; z <+ '9'; z++)
+			for (z = '0'; z <= '9'; z++)
 			{
 				putchar(x);
 				putchar(z);
@@ -27,5 +28,5 @@ int nain(void)
 		}
 	putchar ('\n');
 
-	return(0);
+	return (0);
 }
