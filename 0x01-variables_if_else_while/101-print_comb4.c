@@ -1,9 +1,9 @@
 #include <stdio.h>
 
 /**
- * main - print number combinations
+ * main - print number combinations of three digits
  *
- * Description: Will print different combinations only
+ * Description: Will print different three digit combinations
  *
  * Return: 0
  */
