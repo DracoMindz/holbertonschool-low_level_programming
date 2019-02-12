@@ -1,11 +1,11 @@
 #include <stdio.h>
 
 /**
- * main - print lowercase alphbet
+ * main - print number combinations
  *
- * Description: Will print lowercase only
+ * Description: Will print different combinations only
  *
- * Return: Description of the returned value
+ * Return: 0
  */
 
 int main(void)
@@ -19,18 +19,15 @@ int main(void)
 		{
 			if (x < z)
 			{
-				if (x < '8' || z < '9')
 				{
 					putchar(x);
 					putchar(z);
+				}
+					if (x < '8' || z < '9')
+					{
 					putchar(',');
 					putchar(' ');
-				}
-				if (x == '8' && z == '9')
-				{
-					putchar(x);
-					putchar(z);
-				}
+					}
 			}
 		}
 	}
