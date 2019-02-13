@@ -1,6 +1,5 @@
-#ifndef _MINDZHEADER_H_
-#define _MINDZHEADER_H_
-#include <unistd.h>
+#ifndef _HOLBERTON_H_
+#define _HOLBERTON_H_
 
 int _putchar(char c);
 void print_alphabet(void);
@@ -15,4 +14,4 @@ void times_table(void);
 int add(int, int);
 void print_to_98(int n);
 
-#endif /* _MINDZHEADER_H_ */
+#endif /* _HOLBERTON_H_ */
