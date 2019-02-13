@@ -1,0 +1,11 @@
+#include "holberton.h"
+
+/**
+ *
+ * int _islower(int c) - checks for lowercase charaters
+ *
+ * Return: 0
+ *
+ */
+int _islower(int c);
+{
