@@ -1,5 +1,4 @@
 #include<stdio.h>
-#include<string.h>
 #include"holberton.h"
 
 /**
@@ -13,16 +12,13 @@
 int main(void)
 {
 	int i;
-       char name[10] = {'H', 'o', 'l', 'b', 'e', 'r', 't', 'o', 'n', '\0'};
 
-	for (int i = 0; name[i]; i++)
- 
-		{
-			putchar(i);
-		}
+	char name[10] = "Holberton";
 
+	for (int i = 0; i < 10; i++)
+	{
+		putchar(name[i]);
+	}
 
-
-
-return (0);
+	return (0);
 }
