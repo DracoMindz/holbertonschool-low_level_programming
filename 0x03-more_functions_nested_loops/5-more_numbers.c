@@ -19,13 +19,10 @@ void more_numbers(void)
 		{
 			if (a > 9)
 			{
-			_putchar(a / 10);
-			_putchar(a % 10);
+				_putchar((a / 10) + '0');
 			}
-			else
-			{
-				_putchar(a);
-			}
+				_putchar((a % 10) + '0');
 		}
 	}
+	_putchar('\n');
 }
