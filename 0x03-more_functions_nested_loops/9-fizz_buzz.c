@@ -1,7 +1,8 @@
+#include "holberton.h"
 #include <stdio.h>
 
 /**
- * main -  numbers 1 to 100
+ * main - numbers 1 to 100
  *
  * Description: Fizz for mult 3/buzz mult 5
  *
