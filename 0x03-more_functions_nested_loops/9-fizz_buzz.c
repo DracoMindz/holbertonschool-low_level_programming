@@ -29,6 +29,7 @@ int main(void)
 			printf("Buzz ");
 		}
 		ch = '\n';
+
 		if (x == 100)
 		{
 			putchar(ch);
