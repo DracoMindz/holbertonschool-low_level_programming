@@ -11,6 +11,7 @@
 int main(void)
 {
 	int x;
+	int ch;
 
 	for (x = 1; x <= 100; x++)
 	{
@@ -25,6 +26,11 @@ int main(void)
 		else if ((x % 5) == 0)
 		{
 			printf("Buzz ");
+		}
+		ch = '\n';
+		if (x == 100)
+		{
+			putchar(ch);
 		}
 		else
 		{
