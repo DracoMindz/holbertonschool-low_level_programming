@@ -12,32 +12,28 @@
 int main(void)
 {
 	int x;
-	int ch;
 
 	for (x = 1; x <= 100; x++)
 	{
 		if (((x % 3) == 0) && ((x % 5) == 0))
 		{
-			printf("FizzBuzz ");
+			printf("FizzBuzz");
 		}
 		else if ((x % 3) == 0)
 		{
-			printf("Fizz ");
+			printf("Fizz");
 		}
 		else if ((x % 5) == 0)
 		{
-			printf("Buzz ");
-		}
-		ch = '\n';
-
-		if (x == 100)
-		{
-			putchar(ch);
+			printf("Buzz");
 		}
 		else
 		{
-			printf("%d ", x);
+			printf("%d", x);
 		}
+		putchar(' ');
 	}
+	putchar('\n');
+
 	return (0);
 }
