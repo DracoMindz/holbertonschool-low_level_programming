@@ -1,0 +1,22 @@
+#include "holberton.h"
+/**
+ * _print_last_digit - writes the last digit
+ * @n: The character to print last digit
+ *
+ * Return: 0
+ */
+int _print_last_digit(int n)
+{
+
+        if (n > 0)
+	{
+		n = n % 10
+                return (n);
+        }
+	else if (n < 0)
+	{
+		n = n % -10
+		return (n);
+	}
+		return (0);
+}
