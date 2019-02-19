@@ -1,0 +1,11 @@
+#include "holberton"
+
+/**
+ * strlen - calculate string length
+ *
+ * @*s: string length input
+ *
+ * Description: caluculate string length from input
+ *
+ * Return: value
+ */
