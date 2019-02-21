@@ -12,7 +12,7 @@ void puts_half(char *str)
 {
 	int length, half;
 
-	for (length = 0; str[length] != '\0'; length++)
+	for (length = 1; str[length] != '\0'; length++)
 	{
 		half = (length + 1) / 2;
 	}
@@ -20,6 +20,7 @@ void puts_half(char *str)
 	{
 		_putchar(str[half]);
 		half++;
-		_putchar('\n');
 	}
+
+	_putchar('\n');
 }
