@@ -1,0 +1,1 @@
+More practice with pointers, strings and arrays.  Creating functions.
