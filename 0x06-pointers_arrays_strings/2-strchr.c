@@ -14,16 +14,11 @@ char *_strchr(char *s, char c)
 {
 	int x;
 
-	for (x = 0; s[x] != '\0'; x++)
+	for (x = 0; *(s + x) != '\0'; x++)
 	{
-		if (s[x] != c)
+		if (*(s + x) == c)
 		{
-			return ('\0');
-		}
-		if (s[x] == c)
-		{
-			return (s);
+			return (s + x);
 		}
 	}
-	return (0);
 }
