@@ -17,7 +17,13 @@ char *_strchr(char *s, char c)
 	for (x = 0; s[x] != '\0'; x++)
 	{
 		if (s[x] != c)
+		{
 			return ('\0');
+		}
+		if (s[x] == c)
+		{
+			return (s);
+		}
 	}
-	return (s);
+	return (0);
 }

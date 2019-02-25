@@ -12,6 +12,6 @@ int main(void)
 	char *f;
 
 	f = _strchr(s, 'l');
-	printf("%p\n", f);
+	printf("%s\n", f);
 	return (0);
 }
