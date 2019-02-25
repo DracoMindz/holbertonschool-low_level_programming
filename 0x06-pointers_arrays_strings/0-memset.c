@@ -1,7 +1,7 @@
 #include "holberton.h"
 
 /**
- * memset - fill memeory with a constant byte
+ * _memset - fill memeory with a constant byte
  * @s: pointer
  * @b: constant number of bytes
  * @n: number of bytes of memory to be filled
@@ -10,6 +10,7 @@
  *
  * Return: value
  */
+
 char *_memset(char *s, char b, unsigned int n)
 {
 	unsigned int x;
