@@ -26,10 +26,6 @@ char *_strstr(char *haystack, char *needle)
 			{
 				return (haystack);
 			}
-			if (!*point)
-			{
-				return ('\0');
-			}
 		}
 	}
 	return (0);
