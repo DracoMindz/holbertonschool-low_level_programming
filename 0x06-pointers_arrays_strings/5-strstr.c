@@ -21,6 +21,7 @@ char *_strstr(char *haystack, char *needle)
 			while (*haystack && *point && *haystack == *point)
 			{
 				return (point);
+				haystack++;
 			}
 			if (point == '\0')
 			{
