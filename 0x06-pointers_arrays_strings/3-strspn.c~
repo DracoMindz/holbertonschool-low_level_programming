@@ -1,0 +1,11 @@
+#include "holberton.h"
+
+/**
+ * _strspn - gets the length of a prefix substring
+ * @s: pointer
+ * @accept: pointer
+ *
+ * Description: coopy n bytes from one file to the other
+ *
+ * Return: value
+ */
