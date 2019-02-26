@@ -24,8 +24,10 @@ unsigned int _strspn(char *s, char *accept)
 				c++;
 				break;
 			}
-			if (accept == '\0')
-				return (c);
+		}
+		if (accept == '\0')
+		{
+			return (c);
 		}
 	}
 	return (0);
