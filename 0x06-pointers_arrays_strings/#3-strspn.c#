@@ -1,13 +1,13 @@
 #include "holberton.h"
 
 /**
- * _strspn - gets the length of a prefix substring
+ * _strspn - gets the length of prefix string
  * @s: pointer
  * @accept: pointer
  *
  * Description: gets the length of a prefix substring
  *
- * Return: value
+ * Return: number of bytes
  */
 unsigned int _strspn(char *s, char *accept)
 {
