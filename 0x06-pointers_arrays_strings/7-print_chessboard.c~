@@ -17,7 +17,7 @@ void print_chessboard(char (*a)[8])
 	{
 		for (x = 0; x < 8; x++)
 		{
-			if (a[x] == 1)
+			if ( a[x] == 1)
 			{
 				_putchar('p');
 			}
@@ -29,4 +29,6 @@ void print_chessboard(char (*a)[8])
 			{
 				a[y] = {r, k, b, q, k, b, k, r};
 			}
-			if (a[x] == 7 && y < 8 
+			if (a[x] == 7 && y < 8)
+			{
+				
