@@ -22,10 +22,6 @@ char *_strpbrk(char *s, char *accept)
 			{
 				return (s + x);
 			}
-			else
-			{
-				return ('\0');
-			}
 		}
 	}
 	return (0);
