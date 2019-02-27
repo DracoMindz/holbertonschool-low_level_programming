@@ -18,15 +18,15 @@ char *_strstr(char *haystack, char *needle)
 	{
 		for (point = 0; *needle != '\0'; point++)
 		{
-			while (*haystack && *point && *haystack == *point)
-			{
-				return (point);
-				haystack++;
-			}
-			if (point == '\0')
+			if (*haystack && *point && *haystack == *point)
 			{
 				return (haystack);
 			}
+			if (!*point)
+			{
+				return (top);
+			}
+			haystack = top + 1;
 		}
 	}
 	return (0);
