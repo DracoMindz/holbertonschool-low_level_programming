@@ -19,14 +19,14 @@ void print_chessboard(char (*a)[8])
 		{
 			if (a[x] == 1)
 			{
-				_putchar('p');
+				return ('p');
 			}
 			if (a[x] == 6)
 			{
-				_putchar('P');
+				return ('P');
 			}
 			if (a[x] == 0 && y < 8)
 			{
 				a[y] = {r, k, b, q, k, b, k, r};
 			}
-			if (a[x] == 7 && y < 8 
+			if (a[x] == 7 && y < 8
