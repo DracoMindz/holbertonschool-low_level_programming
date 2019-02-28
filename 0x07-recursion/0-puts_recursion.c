@@ -2,7 +2,7 @@
 
 /**
  * _puts_recursion - function that prints a string followed by a new line
- * @s: pointerr
+ * @s: pointer
  *
  * Description: function searches string for any set of bytes
  *
@@ -10,8 +10,10 @@
  */
 void _puts_recursion(char *s)
 {
-	if (*s != '\0')
+	if (s != '\0')
 	{
-		s++;
+		_putchar(*s);
+		_puts_recursion(s + 1);
 	}
+	_putchar('\n');
 }
