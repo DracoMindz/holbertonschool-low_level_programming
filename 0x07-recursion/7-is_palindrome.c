@@ -1,4 +1,5 @@
 #include "holberton.h"
+
 int Length(char *s, int a);
 int checker(char *s, int b, int e);
 
@@ -6,12 +7,6 @@ int checker(char *s, int b, int e);
  * is_palindrome - function that returns string if palindrome
  * @s: pointer
  *
- * Length - function calculates length
- * @s: pointer
- * @a: value
- *
- * checker - check if palindrome
- * 
  * Description: function that returns string if palindrome
  *
  * Return: value
@@ -24,10 +19,11 @@ int is_palindrome(char *s)
 	if (len == 0)
 	{
 		return (1);
-		return ((checker(s, 0, (Length - 1));
-			}
+	}
+	return ((checker(s, 0, (Length - 1));
 	}
 }
+
 int Length(char *s, int a)
 {
 	if (*s == '\0')
