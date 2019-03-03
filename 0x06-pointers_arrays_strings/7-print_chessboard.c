@@ -17,16 +17,8 @@ void print_chessboard(char (*a)[8])
 	{
 		for (x = 0; x < 8; x++)
 		{
-			if (a[x] == 1)
-			{
-				return ('p');
-			}
-			if (a[x] == 6)
-			{
-				return ('P');
-			}
-			if (a[x] == 0 && y < 8)
-			{
-				a[y] = {r, k, b, q, k, b, k, r};
-			}
-			if (a[x] == 7 && y < 8
+			_putchar(a[y][8]);
+		}
+		_putchar('\n');
+	}
+}
