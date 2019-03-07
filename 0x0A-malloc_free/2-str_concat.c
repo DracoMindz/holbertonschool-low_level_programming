@@ -5,7 +5,7 @@
  * str_concat - function concatenates two strings
  *
  * @s1: first array
- * @s2: second array
+ * @s2: 2nd array
  *
  * Return: value
  *
