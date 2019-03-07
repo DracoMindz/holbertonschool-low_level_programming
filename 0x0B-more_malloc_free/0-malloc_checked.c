@@ -15,12 +15,12 @@ void *malloc_checked(unsigned int b)
 {
 	int *str;
 
-	for (b >= 0; str[b] != '\0'; b++)
+	for (b = 0; str[b] != '\0'; b++)
 	{
 		str = malloc(sizeof(b));
 		return (str);
 	}
-	if ((*str) = (NULL))
+	if (str == NULL)
 	{
 		exit(98);
 	}
