@@ -6,7 +6,7 @@
  * malloc_checked - function allocates memory
  * @b: unsigned int
  *
- * Description: function allocates memeory using malloc
+ * Description: function allocates memory using malloc
  *
  * Return: pointer
  */
