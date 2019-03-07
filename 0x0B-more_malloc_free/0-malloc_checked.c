@@ -10,12 +10,11 @@
  *
  * Return: pointer
  */
-
 void *malloc_checked(unsigned int b)
 {
 	unsigned int *str;
 
-	str = malloc(sizeof(b));
+	str = malloc(b);
 	if (str == NULL)
 	{
 		exit(98);
