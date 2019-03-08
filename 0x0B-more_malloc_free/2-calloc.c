@@ -1,0 +1,28 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include "holberton.h"
+
+/**
+ * _calloc - function allocates memory for an array
+ * @nmemb: number of elelments of data
+ * @size: size of data
+ *
+ * Description: function allocates memory for an array
+ *
+ * Return: value
+ */
+void *_calloc(unsigned int nmemb, unsigned int size)
+{
+	int *arr;
+
+	if ((nmemb == 0) || (size == 0))
+	{
+		return (NULL);
+	}
+	if (arr = NULL)
+	{
+		return (NULL);
+	}
+	arr = malloc(nmemb * sizeof(size));
+	return (arr);
+}
