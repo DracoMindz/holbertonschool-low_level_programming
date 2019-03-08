@@ -26,7 +26,7 @@ unsigned int _mystrlen(char *s)
  * @s2: second string
  * @n: variable
  *
- * Description: function concatenates two strings
+ * Description: function concatenates 2 strings
  *
  * Return: string
  */
