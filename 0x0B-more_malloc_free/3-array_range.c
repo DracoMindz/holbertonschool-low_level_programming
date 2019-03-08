@@ -12,13 +12,24 @@
  */
 int *array_range(int min, int max)
 {
-	int n[];
-	int i, j;
-	int k = 0;
+	int *pb;
+	int *m;
+	int diff = (max - min) + 1;
 
-	for (i = 0; n[] != '\0'; i++)
+	if (max < min)
 	{
-n[i] = i
-
-	return (0);
+		return (NULL);
+	}
+	m = pb = malloc(sizeof(int) * diff);
+	if (pb == NULL)
+	{
+		return (NULL);
+	}
+	while (min <= max)
+	{
+		*pb = min;
+		min++;
+		pb++;
+	}
+	return (m);
 }
