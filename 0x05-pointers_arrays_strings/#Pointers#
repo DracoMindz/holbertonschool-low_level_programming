@@ -1,0 +1,43 @@
+#include<stdio.h>
+
+void foo (int *x)
+{
+    *x = 10;
+}
+void doublefoo(int **x)
+{
+    **x = 15;
+}
+
+int main()
+{
+    int A;       // A is a regular int variable
+    int *B;      // B is a pointer, a type of variable that stores an address.
+                 // This pointer stores an address of an
+                 // int variable (we say the pointer points to an integer).
+                 // We can dereference this pointer
+                 // using the dereference unary (one argument) operator *.
+                 // In general we have to declare what data type
+                 // the pointer points to (i.e. we have to declare
+                 // the data type of the dereferenced pointer)
+                 // not the actual data type of the pointer itself
+                 // which is always a long hexadecimal number.
+                 // So this declaration says, the deferenced B is an int.
+                 // We could say B points to *B (or B points to the address of *B).
+
+    int **C;     // C is a pointer that points to (and dereferences to)
+                 // C*, which itself is another pointer to an int
+                 // (so it dereferences to an address which itself points to an int),
+    A = 5;
+    B = &A;       //setting B to the address of A
+    C = &B;       // setting C to the address of B
+
+
+    printf("\nThe value of B is %d", *B);
+
+    foo (B);
+    printf("\nAfter calling foo(), the value of B is now %d", *B);
+
+    doublefoo (c);
+    printf("\nAfter calling doublefoo() the value of B is now %d", **C);
+}

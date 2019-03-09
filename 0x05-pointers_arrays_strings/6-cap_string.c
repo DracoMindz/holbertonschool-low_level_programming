@@ -15,13 +15,13 @@ char *cap_string(char *n)
 
 	for (i = 0; i < n[i]; i++)
 	{
-		if (i == 0 && n[i] != ' ') || (n[i] != ' ' && n[i - 1] == ' ')
-	{
-	if (n[i] >= 'a' && n[i] <= 'z'
+		if (((i == 0) && (n[i] != ' ')) || (n[i - 1] == ' '))
 		{
-			n[i] = (char) (n[i] - 'a' + 'A');
+			if (n[i] >= 'a' && n[i] <= 'z')
+			{
+				n[i] = (char) (n[i] - 'a' + 'A');
 			}
 		}
 	}
-	return (n)
+	return (n);
 }
