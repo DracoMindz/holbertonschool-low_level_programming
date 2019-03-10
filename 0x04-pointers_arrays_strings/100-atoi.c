@@ -14,6 +14,10 @@ int_atoi(char *s)
 	int sign = 1;
 	int i = 0;
 
+	if (s[i] >= 48 && s[i] <= 57)
+	{
+		return (0);
+	}
 	if (s[0] == '-')
 	{
 		sign = -1;
