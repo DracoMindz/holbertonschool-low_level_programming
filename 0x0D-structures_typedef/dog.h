@@ -7,7 +7,7 @@
  * @name: dog name
  * @owner: dog owner
  *
- * Description: dog info struct
+ * Description: dog header struct
  */
 struct dog
 {
