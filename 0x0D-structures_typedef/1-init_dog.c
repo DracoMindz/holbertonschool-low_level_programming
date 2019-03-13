@@ -9,7 +9,7 @@
  * @age: dog age
  * @owner: dog owner
  *
- * Description: initiates a struct type
+ * Description: initiates a structure type
  */
 
 void init_dog(struct dog *d, char *name, float age, char *owner)
