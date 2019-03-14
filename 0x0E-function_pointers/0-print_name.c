@@ -8,7 +8,7 @@
  *
  * Description: function that prints a name
  *
- * Return: pointer
+ * Return: nothing
  */
 void print_name(char *name, void (*f)(char *))
 {
