@@ -11,7 +11,7 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 	unsigned int i;
 /*initialize valist for n number of integers past*/
 	va_start(list, n);
-/*access all arguments assigned to valist */
+/*access all arguments assigned to valist*/
 	for (i = 0; i < n && separator[i] != '\0'; i++)
 	{
 		printf("%d", i);
