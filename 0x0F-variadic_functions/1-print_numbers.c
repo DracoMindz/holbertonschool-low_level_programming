@@ -8,10 +8,9 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 /*initialize valist for n number of integers past*/
 	va_start(valist, n);
 /*access all arguments assigned to valis*/
-	for (i = 0; i <= n && separator[i] != '\0'; i++)
+	for (i = 0; i < n - 1; i++)
 	{
-		printf("%d", i);
-		/*n = va_arg(valist, unsigned int);*/
+		printf("%d%s", i, separator);
 	}
 	va_end(valist);
 
