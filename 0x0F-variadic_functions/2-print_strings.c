@@ -11,7 +11,7 @@ void print_strings(const char *separator, const unsigned int n, ...)
 /*initialize valist for n number of integers past*/
 	va_start(valist, n);
 /*access all arguments assigned to valis*/
-	for (i = 0; i < n; i++)
+	for (i = 0; i < n && n != '\0'; i++)
 	{
 		word = va_arg(valist, char *);
 		if (word != '\0')
