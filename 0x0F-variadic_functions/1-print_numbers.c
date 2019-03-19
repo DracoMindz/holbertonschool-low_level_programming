@@ -2,6 +2,16 @@
 #include <stdarg.h>
 #include "variadic_functions.h"
 
+/**
+ * print_numbers - function prints numbers
+ * @separator: parameter
+ * @n:parameter
+ *
+ * Description: function prints numbers
+ *
+ * Return: void
+ */
+
 void print_numbers(const char *separator, const unsigned int n, ...)
 {
 	va_list valist;
