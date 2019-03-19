@@ -73,7 +73,7 @@ void print_all(const char * const format, ...)
 
 	va_list args;
 	int i = 0, y;
-	char *space = " ", *sep = ",";
+	char *space = "", *sep = ", ";
 
 	va_start(args, format);
 	while (format != NULL && format[i] != '\0')
