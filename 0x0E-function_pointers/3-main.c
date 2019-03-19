@@ -1,5 +1,4 @@
-#include <stdlib.h>
-#include "function_pointers.h"
+#include "3-calc.h"
 
 /**
  * main - function performs simple operations using other functions
@@ -13,11 +12,9 @@
 
 int main(int argc, char *argv[])
 {
-	int A, B;
+	int pa1, pa2;
 
-	char *C;
-
-	int (D)(int, int);
+	int (*f)(int, int);
 
 	if (argc != 4)
 /* there are four arguements: calc, num1, operator, num2,*/
@@ -26,18 +23,18 @@ int main(int argc, char *argv[])
 		exit(98);
 	}
 /* accounting for three of the four arguments: num1, operator, num2 */
-	A = atoi(argv[1]);
-	B = atoi(argv[3]);
-	C = argv[2];
+	pa1 = atoi(argv[1]);
+	pa2 = atoi(argv[3]);
 /* C is the operator */
 /*call the functions and the operator*/
-	D = get_op_func(C);
-	if (C == NULL)
+	f = get_op_func(argv[2]);
+	if (f == NULL)
 /* if there is no operator present*/
 	{
 		printf("Error\n");
 		exit(99);
 	}
 /*print the result of the A & B with use of operator */
-	printf("%d\n", f(A, B));
+	printf("%d\n", f(pa1, pa2));
+	return (0);
 }

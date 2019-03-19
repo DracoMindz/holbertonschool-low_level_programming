@@ -1,4 +1,4 @@
-#include < stdlib.h >
+#include "3-calc.h"
 #include "function_pointers.h"
 
 int (*get_op_func(char *s))(int, int)
@@ -10,10 +10,10 @@ int (*get_op_func(char *s))(int, int)
 		{"/", op_div},
 		{"%", op_mod},
 		{NULL, NULL}
-};
+	};
 	int i = 0;
-}
-	While(ops[i].op != NULL)
+
+	while(ops[i].op != NULL)
 	{
 		if (*ops[i].op == *s)
 			return (ops[i].f);

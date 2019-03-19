@@ -1,5 +1,7 @@
 #ifndef _warrior1_
 #define _warrior1_
+#include <stdlib.h>
+#include <stdio.h>
 
 /**
  * struct op - Struct op
