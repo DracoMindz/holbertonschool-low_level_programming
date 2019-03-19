@@ -8,13 +8,14 @@ int sum_them_all(const unsigned int n, ...)
 	int sum = 0;
 	unsigned int i;
 
-/*initialize valist for n number od arguements*/
-	va_start(valist, n);
 /*access all arguements assigned to valist*/
 	if (n == 0)
 	{
 		return (0);
 	}
+
+	va_start(valist, n);
+
 	for (i = 0; i < n; i++)
 	{
 		sum += va_arg(valist, unsigned int);
