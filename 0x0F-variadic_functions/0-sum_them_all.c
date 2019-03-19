@@ -2,6 +2,15 @@
 #include <stdarg.h>
 #include "variadic_functions.h"
 
+/**
+ * sum_them_all - function that adds integers
+ * @n: parameter
+ *
+ * Description: function that adds integers
+ *
+ * Return: sum
+ */
+
 int sum_them_all(const unsigned int n, ...)
 {
 	va_list valist;
