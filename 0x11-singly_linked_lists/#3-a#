@@ -1,0 +1,20 @@
+#include <stdlib.h>
+#include <stdio.h>
+#include <strings.h>
+#include "lists.h"
+
+/**
+ * *add_node_end - function prints lists
+ * @h: list
+ * @str: string of const char
+ *
+ * Description: function prints lists
+ * Return: pointer
+ */
+
+list_t *add_node_end(list_t **head, const char *str)	unsigned int i = 0;
+	const list_t *list;
+
+	list = h;
+
+	while (list != NULL)
