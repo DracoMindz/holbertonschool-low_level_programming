@@ -8,7 +8,7 @@
  * @head: pointer to a const list
  * @n: pointer to string of const int
  *
- * Description: function adds new node at the beginning of a node
+ * Description: function adds new node at the beginning of a list
  *
  * Return: new node
  */
@@ -23,17 +23,17 @@ listint_t *add_nodeint(listint_t **head, const int n)
 		return (NULL);
 	}
 /*initializing the elements in the new_node*/
-	new_node->str = strdup(str);
+	new_node->n = n
 /*checking to see if the string is NULL.*/
-	if (new_node->str != '\0')
+	if (new_node->n != '\0')
 	{
 /*check the string for '\0'*/
-		for (i = 0; new_node->str[i] != '\0'; i++)
+		for (i = 0; new_node->n != '\0'; i++)
 		{
 			;
 		}
 	}
-	new_node->len = i;
+	new_node->n = i;
 	new_node->next = *head;
 	*head = new_node;
 	return (new_node);
