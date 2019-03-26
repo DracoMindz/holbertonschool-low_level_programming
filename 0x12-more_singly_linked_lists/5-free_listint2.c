@@ -7,7 +7,7 @@
  * free_listint2 - function frees a list
  * @head: list of ints
  *
- * Return: nothing
+ * Return: void
  */
 void free_listint2(listint_t **head)
 {
