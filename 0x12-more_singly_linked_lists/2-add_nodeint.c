@@ -15,26 +15,14 @@
 listint_t *add_nodeint(listint_t **head, const int n)
 {
 	listint_t *new_node;
-	unsigned int i;
 
-	new_node = malloc(sizeof(list_t));
+	new_node = malloc(sizeof(listint_t));
 	if (new_node == NULL)
 	{
 		return (NULL);
 	}
-/*initializing the elements in the new_node*/
-	new_node->n = n
-/*checking to see if the string is NULL.*/
-	if (new_node->n != '\0')
-	{
-/*check the string for '\0'*/
-		for (i = 0; new_node->n != '\0'; i++)
-		{
-			;
-		}
-	}
-	new_node->n = i;
 	new_node->next = *head;
 	*head = new_node;
+	new_node->n = n;
 	return (new_node);
 }
