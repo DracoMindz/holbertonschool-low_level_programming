@@ -20,7 +20,6 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 
 	if (head == NULL) /*If head points to NULL(if no linked list exists*/
 		return (NULL);
-	pointerNode = *head;
 	if (idx == 0)
 	{
 		node = malloc(sizeof(listint_t));
@@ -39,6 +38,7 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 		}
 		return (node);
 	}
+	pointerNode = *head;
 	for (; count < idx - 1 && pointerNode != NULL; count++)
 	{
 		pointerNode = pointerNode->next;
