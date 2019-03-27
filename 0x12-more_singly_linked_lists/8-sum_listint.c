@@ -4,8 +4,26 @@
 #include "lists.h"
 
 /**
- * main - check the code for Holberton School students.
+ * sum_listint - function returns sum of all data
+ * @head: list of ints
  *
- * Return: Always 0.
+ * Return: data
  */
+int sum_listint(listint_t *head)
+{
+	int data = 0;
+	listint_t *arrow;
 
+	if (head == NULL)
+	{
+		return (0);
+	}
+	while (head)
+	{
+		arrow = head;
+		head = arrow->next;
+		data += arrow->n;
+	}
+
+	return (data);
+}
