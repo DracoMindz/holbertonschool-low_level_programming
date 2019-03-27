@@ -5,7 +5,7 @@
 
 /**
  * sum_listint - function returns sum of all data
- * @head: list of ints
+ * @head: list of integers
  *
  * Return: data
  */
