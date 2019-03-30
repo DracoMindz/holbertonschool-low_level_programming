@@ -7,12 +7,13 @@
  */
 int set_bit(unsigned long int *n, unsigned int index)
 {
-	index = 0;
+
 
 	if (n == NULL || index > 63)
 	{
 		return (-1);
 	}
-	*n |= 1UL << index;
+
+	*n = *n | 1 << index;
 	return (1);
 }
