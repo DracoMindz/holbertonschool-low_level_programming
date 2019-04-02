@@ -14,6 +14,5 @@ int main(void)
 		i++;
 	}
 	write(2, str, i);
-	//putchar('\n');
 	return (1);
 }
