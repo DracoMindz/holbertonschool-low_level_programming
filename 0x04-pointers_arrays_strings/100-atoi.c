@@ -8,22 +8,25 @@
  *
  * Return: value
  */
-int_atoi(char *s)
+int _atoi(char *s)
 {
 	int res = 0;
-	int sign = 1;
-	int i = 0;
+	signed char sign = 1;
+	char *nums;
 
-	if (s[i] >= 48 && s[i] <= 57)
+	for (nums = s; (*nums < '0' || *nums > '9') && *nums; nums++)
+		if (*nums == '-')
+		{
+			sign = -sign;
+		}
+	for (; *nums >= '0' && *nums <= '9'; nums++)
 	{
-		return (0);
+		res *= 10;
+		if (sign == -1)
+			res -= *nums - '0';
+		else
+			res += *nums - '0';
 	}
-	if (s[0] == '-')
-	{
-		sign = -1;
-		i++;
-	}
-	for (; s[i] != '\0'; ++i)
-		res = res * 10 + s[i] - '0';
-	return (sign * res);
+	return (res);
+	return (0);
 }
