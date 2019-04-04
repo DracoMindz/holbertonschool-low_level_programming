@@ -20,30 +20,35 @@ ssize_t read_textfile(const char *filename, size_t letters)
 {
 	int fd;
 	char *buff;
-	int nr;
-	int nw;
+	size_t nr = 0, nw;
+	ssize_t read_now, write_now;
 
 
-	if (filename == NULL)
+	if (filename == NULL || letters == 0)
 		return (0);
-/*read*/
-	fd = open(filename, O_RDONLY);
-	if (fd == -1)
-		return (0);
-
 	buff = malloc(letters);
 	if (buff == NULL)
 		return (0);
-
-	nr = read(fd, buff, letters);
-	if (nr == -1)
-	return (0);
-/*write*/
-	nw = write(1, buff, letters);
-	if (nr == -1 || nw != nr)
-	return (0);
-
-	free(buff);
+	fd = open(filename, O_RDONLY);
+	if (fd < 0)
+		return (0);
+	do {
+		read_now = read(fd, buff, letters - nr);
+		if (read_now < 0)
+			return (0);
+		if (read_now == 0)
+			continue;
+		nr += read_now;
+		nw = 0;
+		do {
+			write_now = write(STDOUT_FILENO,
+					  buff + nw, read_now - nw);
+			if (write_now <= 0)
+				return (0);
+			nw += write_now;
+		} while (nw < (size_t)read_now);
+	} while (nr < letters && read_now > 0);
 	close(fd);
-	return (nw);
+	free(buff);
+	return (nr);
 }
