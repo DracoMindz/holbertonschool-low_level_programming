@@ -8,6 +8,7 @@
  *
  * Return: value
  */
+
 void print_chessboard(char (*a)[8])
 {
 	char y;
@@ -17,8 +18,8 @@ void print_chessboard(char (*a)[8])
 	{
 		for (x = 0; x < 8; x++)
 		{
-			_putchar(a[y][8]);
+			_putchar(a[y][x]);
 		}
-		_putchar('\n');
 	}
+	_putchar('\n');
 }

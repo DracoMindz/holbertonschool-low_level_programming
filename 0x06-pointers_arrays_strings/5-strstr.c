@@ -14,20 +14,15 @@ char *_strstr(char *haystack, char *needle)
 	char *top = haystack;
 	char *point = needle;
 
-	for (top = 0; *haystack != '\0'; top++)
+	for (; *haystack != '\0'; top++, haystack++)
 	{
-		for (point = 0; *needle != '\0'; point++)
-		{
-			if (*haystack && *point && *haystack == *point)
-			{
-				return (haystack);
-			}
-			if (!*point)
-			{
-				return (top);
-			}
-			haystack = top + 1;
-		}
+		for (; *point != '\0' && *top == *point; point++, top++)
+			;
+		if (*point == '\0')
+			return (haystack);
+		point = needle;
+		top = haystack;
+
 	}
 	return (0);
 }
