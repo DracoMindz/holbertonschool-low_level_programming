@@ -16,6 +16,7 @@ char *rot13(char *r)
 	char array2[] = "nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM";
 
 	for (x = 0; array[x] != '\0'; x++)
+	{
 		for (y = 0; array2[y] != '\0'; y++)
 		{
 			if (r[x] == array[y])
@@ -24,5 +25,6 @@ char *rot13(char *r)
 				break;
 			}
 		}
+	}
 	return (r);
 }
