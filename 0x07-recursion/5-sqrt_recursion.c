@@ -1,4 +1,4 @@
-gitpusher#include "holberton.h"
+#include "holberton.h"
 
 /**
  * root - find the root of square root
@@ -46,5 +46,5 @@ int _sqrt_recursion(int n)
 	{
 		return (root(0, n));
 	}
+	return (0);
 }
-
