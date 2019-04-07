@@ -47,12 +47,13 @@ void error98(char *file_from)
  */
 int main(int argc, char **argv)
 {
-	int fd0, fd1, fd2;
-	char *file_to, *file_from, *buffer;
+	int fd0, fd1;
+	char *file_to, *file_from;
+	char buffer[1024];
 	ssize_t bytes_read, bytes_written, close_error;
 
 	if (argc != 3)
-		void error97();
+		 error97();
 	file_from = argv[1];
 	file_to = argv[2];
 	fd0 = open(file_to, O_WRONLY | O_CREAT | O_TRUNC, 0664);
@@ -60,29 +61,29 @@ int main(int argc, char **argv)
 	if (fd1 == -1)
 		 error98(file_from);
 	do {
-		bytes_read = read(file_from, buffer, BSIZE);
+		bytes_read = read(fd1, buffer, BSIZE);
 		if (bytes_read == -1)
 			error98(file_from);
 		if (bytes_read == 0)
 		{
 			break;
 		}
-		bytes_written = write(to, buffer, bytes_read);
+		bytes_written = write(fd0, buffer, bytes_read);
 		if (bytes_written < 1)
 		{
 			error99(file_to);
 		}
 	} while (1);
-	close_error = close(file_to);
+	close_error = close(fd0);
 	if (close_error == -1)
 	{
-		dprintf(STDERR_FILENO, "Can't read from file_to %d", file_to);
+		dprintf(STDERR_FILENO, "Can't read from file_to %d", fd0);
 		return (100);
 	}
-	close_error = close(file_from);
+	close_error = close(fd1);
 	if (close_error == -1)
 	{
-		dprintf(STDERR_FILENO, "Cant' read from file_from %d", file_from);
+		dprintf(STDERR_FILENO, "Cant' read from file_from %d", fd1);
 		return (100);
 	}
 	return (0);
