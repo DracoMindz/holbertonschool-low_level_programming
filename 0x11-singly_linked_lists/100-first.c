@@ -1,5 +1,10 @@
 #include <stdio.h>
-
+/**
+ * before_main - function occurs before main
+ *
+ * Return: void
+ *
+ */
 void before_main(void) __attribute__((constructor));
 
 void before_main(void)
