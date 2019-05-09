@@ -1,13 +1,13 @@
 #include "lists.h"
 /**
- * dlist_len - function returns number of elements in a linked list
+ * dlistint_len - function returns number of elements in a linked list
  * @h: string
  *
  * Return: number of eliments linked
  */
 size_t dlistint_len(const dlistint_t *h)
 {
-	unsigned int index = 0;
+	unsigned int index = 1;
 	const dlistint_t *list;
 
 	list = h;
@@ -22,5 +22,5 @@ size_t dlistint_len(const dlistint_t *h)
 		list = list->next;
 
 	}
-	return (index);
+	return (0);
 }
