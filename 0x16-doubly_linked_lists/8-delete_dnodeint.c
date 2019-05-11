@@ -1,7 +1,7 @@
 #include "lists.h"
 
 /**
- * delete_dnodeint_at_index - function deletes the node at index of linked list.
+ * delete_dnodeint_at_index - function deletes the node at index
  * @head: double pointer to a list
  * @index: interger
  *
@@ -9,30 +9,24 @@
  */
 int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 {
-	dlistint_t *ptr;
-	dlistint_t *previousPtr;
+	dlistint_t *current = *head;
+	unsigned int count = 0;
 
-	if (head == NULL)
-		return (NULL);
+	if (head == NULL || *head ==  NULL)
+		return (-1);
 	while (count < index)
 	{
-		if (head->next == NULL)
-			return (NULL);
-		head = head->next;
+		if (current->next == NULL)
+			return (-1);
+		current = current->next;
 		count++;
 	}
-	return (head);
-	}
-
-	if (ptr == NULL)
-	{
-		return (-1);
-	}
-	if (ptr == *head)
-		*head = ptr->next;
-	else
-		previousPtr->next = ptr->next;
-
-	free(ptr);
+	if (*head == current)
+		*head = current->next;
+	if (current->next != NULL)
+		current->next->prev = current->prev;
+	if (current->prev != NULL)
+		current->prev->next = current->next;
+	free(current);
 	return (1);
 }
