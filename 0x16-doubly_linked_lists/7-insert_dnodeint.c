@@ -18,7 +18,7 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 
 	if (h == NULL) /*If head points to NULLif no linked list exists*/
 		return (NULL);
-	if (idx == 0)
+	if (idx == 0 || *h == NULL)
 	{
 		newNode = add_dnodeint(h2, n);
 		return (newNode);
