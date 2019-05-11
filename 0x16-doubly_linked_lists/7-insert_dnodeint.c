@@ -27,8 +27,7 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 		return (newNode);
 	}
 	pointerNode = *h;
-/*	if (pointerNode == NULL)*/
-	/*return (NULL);*/
+
 	length = dlistint_len(pointerNode);
 	if (idx > length)
 		return (NULL);
