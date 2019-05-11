@@ -36,8 +36,8 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 	{
 		pointerNode = pointerNode->next;
 	}
-	printf("%d\n", count);
-	printf("%d\n", idx);
+	/*printf("%d\n", count);
+	  printf("%d\n", idx);*/
 	newNode = malloc(sizeof(dlistint_t));
 	if (newNode == NULL)
 		return (NULL);
