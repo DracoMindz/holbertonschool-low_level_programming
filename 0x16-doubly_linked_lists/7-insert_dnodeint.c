@@ -24,8 +24,8 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 		return (newNode);
 	}
 	pointerNode = *h;
-	if (pointerNode == NULL)
-		return (NULL);
+	/*if (pointerNode == NULL)
+	  return (NULL);*/
 	for (; count < idx - 1 && pointerNode != NULL; count++)
 	{
 		pointerNode = pointerNode->next;
