@@ -14,7 +14,7 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 	dlistint_t *pointerNode;
 	dlistint_t *newNode;
 
-	unsigned int count = 0;
+	unsigned int count = 1;
 
 	if (h == NULL) /*If head points to NULLif no linked list exists*/
 		return (NULL);
@@ -24,9 +24,9 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 		return (newNode);
 	}
 	pointerNode = *h;
-	/*if (pointerNode == NULL)
-	  return (NULL);*/
-	for (; count < idx - 1 && pointerNode != NULL; count++)
+	if (pointerNode == NULL)
+		return (NULL);
+	for (; count + 1 <= idx && pointerNode != NULL; count++)
 	{
 		pointerNode = pointerNode->next;
 	}
@@ -39,7 +39,5 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 	newNode->prev = pointerNode;
 	if (newNode->next != NULL)
 		newNode->next->prev = newNode;
-	/**h = newNode;*/
-
 	return (newNode);
 }
