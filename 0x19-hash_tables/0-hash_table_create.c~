@@ -1,0 +1,20 @@
+#include "hash_tables.h"
+
+/**
+ * hash_table_create - create hash tabler
+ *
+ * Return: pointer to hash table
+ */
+hash_table_t *hash_table_create(unsigned long int size)
+{
+	unsigned int count;
+
+	hash_table_t* result = malloc(sizeof(hash_table_t));
+
+	result->count = 0;
+	result->size = size;
+
+	result->array = malloc(sizeof(hash_node_t*) * size);
+
+	return result;
+}
