@@ -11,20 +11,20 @@
  */
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
-	hash_node_t *k_node; //*array_node//;
+	hash_node_t *k_node, *array_node;
 	unsigned long int index;
 
 	k_node = NULL;
-	//array_node = NULL;//
+	array_node = NULL;
 	index = key_index((const unsigned char *)key, ht->size);
-	//array_node = ht->array[index];//
+	array_node = ht->array[index];
 
 	if (ht == NULL || key == NULL || value == NULL)
 		return (0);
 
-	if (ht->array[index] != NULL && strcmp(ht->array[index]->key, key) == 0)
+	if array_node != NULL && strcmp(array_node->key, key) == 0)
 	{
-		ht->array[index]->value = strdup(value);
+		array_node->value = strdup(value);
 		return (1);
 	}
 	k_node = calloc(1, sizeof(hash_node_t));
@@ -32,8 +32,8 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		return (0);
 	k_node->key = strdup(key);
 	k_node->value = strdup(value);
-	k_node->next  = ht->array[index];
-	ht->array[index] = k_node;
+	k_node->next  = array_node;
+	array_node = k_node;
 
 	return (1);
 }
