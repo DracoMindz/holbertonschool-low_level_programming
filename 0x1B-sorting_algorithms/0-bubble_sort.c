@@ -17,18 +17,26 @@ void bubble_sort(int *array, size_t size)
 	 
 	 for(a = 0; a < size-1; a++);
 	 {
-	   for(b = 0; b < size - b - 1; b++)
+	   for(b = 0; b < size - 1; b++)
 	     {
-	       if(array[b] > array[b - 1])
+	       if(array[b] < array[b + 1])
+                 {
+                   x = array[b];
+                   printf("%d\n", x);
+                   array[b] = array[b + 1];
+                   array[b + 1] = x;
+                 }
+	       else
 		 {
-		   x = array[b];
-		   array[b] = array[b - 1];
-		   array[b-1] = x;
+		   if  (array[b] > array[b + 1])
+                    x = array[b + 1]
+		      printf("%d\n", x);
+		   array[b + 1] = array[b];
+		   array[b + 1] = x;
 		 }
-	     }
-	 }
+             }
+         }
 }
-
     
   
 
