@@ -20,11 +20,10 @@ void selection_sort(int *array, size_t size);
         {
             if (array[b] < array[c])
             {
-            c = b;
+                c = b;
             }
         }
-
-        if ( c != a)
+        if (c != a)
         {
             temp  = array[a];
             array[a] = array[c];
