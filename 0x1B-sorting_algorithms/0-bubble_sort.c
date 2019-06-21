@@ -4,12 +4,12 @@
 
 void print_array(const int *array, size_t size)
 {
-    size_t i;
+	size_t i;
 
-    i = 0;
-    while (array && i < size)
-    {
-        if (i > 0)
+	i = 0;
+	while (array && i < size)
+	{
+		if (i > 0)
             printf(", ");
         printf("%d", array[i]);
         ++i;
@@ -28,9 +28,9 @@ void print_array(const int *array, size_t size)
 
 void bubble_sort(int *array, size_t size)
 {
- 
-     int flag, x;
-	 size_t a, b;
+ 	int flag, x;
+	size_t a, b;
+	
 	if (array == NULL || size < 2)
 		return; 
 	for(a = 0; a < size-1; a++)
