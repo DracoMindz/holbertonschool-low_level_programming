@@ -1,0 +1,16 @@
+CC = gcc	#compiler to use
+
+SRC = main.c holberton.c  	# all files with .c ext stored in vars SRC
+OBJ = $(SRC:.c=.o)	# all files with .o ext stored in vars OBJ
+NAME = holberton
+
+all: $(OBJ)
+	$(CC) -o $(NAME) $(OBJ)
+
+clean: 
+	(setq make-backup-files nil)
+
+oclean: 
+	rm edit $(OBJ)
+fclean:
+	rm -f $(OBJ) *~ core /*~ /*#
