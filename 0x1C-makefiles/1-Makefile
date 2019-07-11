@@ -1,6 +1,6 @@
-all: holberton
-
 CC = gcc	#compiler to use
 
 SRC := $(wildcard *.c) 	# all files with .c ext stored in vars SRC
 
+all: $(SRC)
+	$(CC) main.c holberton.c -o holberton

@@ -5,7 +5,5 @@ OBJ := $(SRC:%.c=%.o)	# all files with .o ext stored in vars OBJ
 NAME := holbertron
 
 all : $(OBJ)
-	$(CC) -o main main.o holberton.o 
+	$(CC)  main.o  holberton.o -o holberton 
 
-clean:
-	rm -rvf *.o ${OBJ}
