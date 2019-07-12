@@ -3,6 +3,7 @@
 
 
 def island_perimeter(grid):
+#find the perimeter of an island in a grid
     numZeros = 0
 
     for currentRowDex in range(len(grid)):

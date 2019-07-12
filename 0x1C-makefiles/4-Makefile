@@ -1,5 +1,5 @@
 CC = gcc	#compiler to use
-RM = rm  
+RM = rm -f 
 CFLAGS = -Wall -Werror -Wextra -pedantic
 SRC = main.c holberton.c  	# all files with .c ext stored in vars SRC
 OBJ = $(SRC:.c=.o)	# all files with .o ext stored in vars OBJ
