@@ -14,4 +14,4 @@ oclean:
 fclean:
 	clean oclean
 re:
-	$(CC) -f $(SRC)
+	 FORCE $(CC) $(SRC)
