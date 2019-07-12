@@ -1,15 +1,15 @@
-CC = gcc -Wall -Werror -Wextra -pedantic	#compiler to use
-#RM = rm -f
+CC = gcc 	#compiler to use
 SRC = main.c holberton.c  	# all files with .c ext stored in vars SRC
 OBJ = $(SRC:.c=.o)	# all files with .o ext stored in vars OBJ
 NAME = holberton
+CFLAGS = -Wall -Werror -Wextra -pedantic
 
-all: $(OBJ)
+.PHONY: all clean fclean oclean re
+all: m.h. $(OBJ)
 	$(CC) $(OBJ) -o $(NAME)
-
 clean:
-	$(RM) $(NAME) *~
+	$(RM) *~ $(NAME)
 oclean: 
 	$(RM) $(OBJ)
 fclean:clean oclean
-re: oclean all
+re: oclean $(OBJ)all
