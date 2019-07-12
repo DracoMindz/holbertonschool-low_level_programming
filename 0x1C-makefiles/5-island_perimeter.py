@@ -33,7 +33,7 @@ def island_perimeter(grid):
                     numRight = 0
                 else:
                     numRight = grid[currentRowDex][currentColDex + 1]
-        
+
                 if numTop == 0:
                     numZeros += 1
                 if numRight == 0:
@@ -44,6 +44,3 @@ def island_perimeter(grid):
                     numZeros += 1
 
     return numZeros
-            
-            
-
