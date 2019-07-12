@@ -1,12 +1,9 @@
 #!/usr/bin/python3
-"""
-Island Perimeter Problem
-"""
-                     
+#Island Perimeter Problem
+
+
 def island_perimeter(grid):
-"""
-Function will find the perimeter of an island in a grid
-"""
+#Function will find the perimeter of an island in a grid
     numZeros = 0
 
     for currentRowDex in range(len(grid)):
