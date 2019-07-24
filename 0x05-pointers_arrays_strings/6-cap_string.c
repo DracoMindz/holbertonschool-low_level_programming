@@ -11,17 +11,25 @@
 
 char *cap_string(char *n)
 {
-	int i;
+	int i, m;
+	char c[] = " \t\n,;.!?\"(){}";
 
-	for (i = 0; i < n[i]; i++)
+	if (n[0] >= 'a' && n[0] <= 'z')
 	{
-		if (i == 0 && n[i] != ' ') || (n[i] != ' ' && n[i - 1] == ' ')
+		n[0] = ((char)n[0] - 'a' + 'A');
+	}
+	for (i = 0; n[i] != '\0'; i++)
 	{
-	if (n[i] >= 'a' && n[i] <= 'z'
+		for (m = 0; c[m] != '\0'; m++)
 		{
-			n[i] = (char) (n[i] - 'a' + 'A');
+			if (n[i - 1] == c[m])
+			{
+				if (n[i] >= 'a' && n[i] <= 'z')
+				{
+					n[i] = ((char)n[i] - 'a' + 'A');
+				}
 			}
 		}
 	}
-	return (n)
+	return (n);
 }

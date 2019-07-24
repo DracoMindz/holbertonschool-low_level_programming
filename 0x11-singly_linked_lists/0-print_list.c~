@@ -1,0 +1,23 @@
+#include <stdlib.h>
+#include <stdio.h>
+#include <string.h>
+#include "lists.h"
+/**
+ * print_list - function prints lists
+ * @h: string
+ *
+ * Description: function prints lists
+ * Return: pointer
+ */
+size_t print_list(const list_t *h)
+{
+	size_t nodes;
+	list_t *list;
+
+	for (nodes = 0; nodes < list->len; nodes++)
+	{
+		printf("[%lu]%s", nodes, h->str);
+	}
+	return (0);
+
+}

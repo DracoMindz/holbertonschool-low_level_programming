@@ -30,9 +30,9 @@ int main(void)
 		{
 			printf("%d", x);
 		}
-		putchar(' ');
+		if (x < 100)
+			putchar(' ');
 	}
 	putchar('\n');
-
 	return (0);
-}
+}or

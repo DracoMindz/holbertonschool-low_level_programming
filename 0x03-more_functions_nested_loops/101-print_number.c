@@ -2,18 +2,24 @@
 
 /**
  * print_number - print numbers
- * @a: integer
+ * @n: integer
  *
  * Description: will output numbers
  * Return: Always 0.
  */
-void print_number(int a)
+void print_number(int n)
 {
-		if (a < 0 && a >= 0)
-		{
-			_putchar(a / 10 + '0');
-			_putchar(a / 100 + '0');
-			_putchar(a / 1000 + '0');
-			_putchar(a % 10 + '0');
-		}
+	unsigned int m;
+
+	if (n < 0)
+	{
+		_putchar('-');
+		n = -n;
+	}
+	m = (unsigned int)n;
+	if (m / 10)
+	{
+		print_number(m / 10);
+	}
+	_putchar(m % 10 + '0');
 }
