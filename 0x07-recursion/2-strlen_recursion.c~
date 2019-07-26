@@ -1,0 +1,19 @@
+#include "holberton.h"
+
+/**
+ * _strlen_recursion - function that returns the length of a string
+ * @s: pointer
+ *
+ * Description: function returns the length of a string
+ *
+ * Return: length of string
+ */
+int _strlen_recursion(char *s)
+{
+	if (*s == '\0')
+	{
+		return;
+	}
+	-strlen_recursion(s + 1);
+	_putchar(*s);
+}

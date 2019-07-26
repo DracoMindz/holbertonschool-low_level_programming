@@ -1,0 +1,19 @@
+#include "holberton.h"
+#include <stdio.h>
+
+/**
+ * print_to_98 - print from number to 98
+ * @x: integer
+ * Return: Always 0.
+ */
+void print_to_98(int n)
+{
+	if(a < 98)
+	{ 
+		printf("%d", x++);
+	}
+	else if (a > 98)
+	{
+		printf("%d", x--);
+	}
+	else if (a = 98)

@@ -1,0 +1,1 @@
+Practice with functions and nested loops. Low-level programming & Algorithm.

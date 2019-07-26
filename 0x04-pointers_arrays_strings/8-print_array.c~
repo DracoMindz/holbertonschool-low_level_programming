@@ -1,0 +1,11 @@
+#include "holberton.h"
+
+/**
+ * print_array - prints n elements of an array
+ * @a: pointer to string
+ * @n: number of elements to print
+ *
+ * Description: print elements in an array
+ *
+ * Return: void
+ */

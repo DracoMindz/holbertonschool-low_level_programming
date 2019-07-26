@@ -1,0 +1,13 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include "holberton.h"
+
+/**
+ * main - program prinst a string as a list
+ * @argc: count number of arguements
+ * @argv: pointer
+ *
+ * Description: program prints a strings as a list
+ *
+ * Return: 0
+ */
