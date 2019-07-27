@@ -8,19 +8,19 @@
  * Return: void value
  *
  */
-void binary_tree_levelprint(const binary_tree_t *tree, 
+void binary_tree_levelprint(const binary_tree_t *tree,
 			    void (*func)(int), int level)
 {
-  if (tree == NULL || func == NULL)
-    return;
+        if (tree == NULL || func == NULL)
+	  return;
 
-  if (level == 1)
-    func(tree->n);
-  else if (level > 1)
-    {
-      binary_tree_levelprint(tree->left, func, (level - 1));
-      binary_tree_levelprint(tree->right, func, (level - 1));
-    }
+	if (level == 1)
+	  func(tree->n);
+	else if (level > 1)
+	  {
+	    binary_tree_levelprint(tree->left, func, (level - 1));
+	    binary_tree_levelprint(tree->right, func, (level - 1));
+	  }
 }
 /**
  * binary_tree_leveloader - funtion prints tree based on height
