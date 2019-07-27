@@ -5,7 +5,7 @@
  * @tree: a pointer to the root of the tree to traverse
  * @func: a pointer to a function to call each node
  *
- * Return: void
+ * Return: void value
  *
  */
 void binary_tree_levelprint(const binary_tree_t *tree, void (*func)(int), int level)
