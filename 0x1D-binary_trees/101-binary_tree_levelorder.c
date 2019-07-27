@@ -35,7 +35,7 @@ void binary_tree_levelorder(const binary_tree_t *tree, void (*func)(int))
 
 	h = binary_tree_height(tree) + 1;
 
-	for (lev = 0, lev <= h; lev++)
+	for (lev = 0; lev <= h; lev++)
 	  binary_tree_levelprint(tree, func, lev);
 	(void)h; 
 }
@@ -43,7 +43,7 @@ void binary_tree_levelorder(const binary_tree_t *tree, void (*func)(int))
  * binary_tree_height - caluculates height of binary tree
  * @tree: tree to be measured
  *
- * Return: tree height
+ * Return: tree height value
  */
 size_t binary_tree_height(const binary_tree_t *tree)
 {
