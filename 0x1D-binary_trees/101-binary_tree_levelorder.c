@@ -11,7 +11,7 @@
 void binary_tree_levelprint(const binary_tree_t *tree, void (*func)(int), int level)
 {
   if (tree == NULL || func == NULL)
-    return (0);
+    return;
 
   if (level == 1)
     func(tree->n);
