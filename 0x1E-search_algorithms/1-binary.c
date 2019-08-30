@@ -1,27 +1,35 @@
+#include "search_algos.h"
 
-int binary_search_helper(int *array, size_t low, size_t high, int value)
+/**
+ * binary_searcher - function searches for value in array
+ *@array: array of values to be searched
+ *@first: first element in the array
+ *@last: last element in the array
+ */
+
+int binary_searcher(int *array, size_t first, size_t last, int value)
 {
         size_t a_index;
-        int middle;
+        int mid;
 
         printf("Searching in array: ");
-        for (a_index = low; a_index <= high; a_index++)
+        for (a_index = first; a_index <= last; a_index++)
         {
                 printf("%d", array[a_index]);
-                if (a_index < high)
+                if (a_index < last)
                         printf(", ");
-                if (a_index == high)
+                if (a_index == last)
                         printf("\n");
         }
-        middle = ((high + low) / 2);
-        if (array[middle] == value)
-                return (middle);
-        if (high > low)
+        mid = ((last + first) / 2);
+        if (array[mid] == value)
+                return (mid);
+        if (last > first)
         {
-                if (value < array[middle])
-                        return (binary_search_helper(array, low, middle - 1, value));
-                else if (value > array[middle])
-                        return (binary_search_helper(array, middle + 1, high, value));
+                if (value < array[mid])
+                        return (binary_search_helper(array, first, mid - 1, value));
+                else if (value > array[mid])
+                        return (binary_search_helper(array, mid + 1, last, value));
         }
         return (-1);
 }
