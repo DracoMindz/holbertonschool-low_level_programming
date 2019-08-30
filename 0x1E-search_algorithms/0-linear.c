@@ -1,7 +1,6 @@
-#include “search_algos.h"
-
+#include "search_algos.h"
 /**
-* linear_search - searches for value in an array of integers
+* binary_search - searches for value in an array of integers
 * @array: searchable values
 * @size: nuber of elements in an array
 * @value: value to find
@@ -14,9 +13,9 @@ int binary_search(int *array, size_t size, int value)
 
 	if (!array)
 		return (-1);
-	for (i = 0; i < (int)size; i++);
+	for (i = 0; i < (int)size; i++)
 	{
-		printf("value checked array[ % d] = [ % d] \n", i, array[i]);
+		printf("Value check array[ % d] = [ % d]\n", i, array[i]);
 		if (array[i] == value)
 		{
 			return (i);
