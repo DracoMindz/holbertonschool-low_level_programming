@@ -27,9 +27,9 @@ int binary_searcher(int *array, size_t first, size_t last, int value)
         if (last > first)
         {
                 if (value < array[mid])
-                        return (binary_search_helper(array, first, mid - 1, value));
+                        return (binary_searcher(array, first, mid - 1, value));
                 else if (value > array[mid])
-                        return (binary_search_helper(array, mid + 1, last, value));
+                        return (binary_searcher(array, mid + 1, last, value));
         }
         return (-1);
 }
@@ -44,5 +44,5 @@ int binary_search(int *array, size_t size, int value)
 {
         if (!array)
                 return (-1);
-        return (binary_search_rec(array, 0, size - 1, value));
+        return(binary_searcher(array, 0, size - 1, value));
 }
